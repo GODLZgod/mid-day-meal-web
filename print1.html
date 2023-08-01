@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="print1.css">
+    </head>
+<body>
+    <div class="logo">
+        <img src="img3.png" alt="logo" width="110px" height="110px">
+    </div>
+   <h1 style="color: g
+reen;">
+      MID-DAY MEAL SCHEME SANGLI
+    </h1>
+    <div class="tab1">
+    
+    <center>
+        <table border="1" cellspacing="3" bgcolor="white" >
+            <caption><b> DATA</b></caption>
+            <tr style="background: silver;">
+                <th rowspan="2">School</th>
+                <th colspan="7">Supply</th>
+            </tr>
+        <tr style="background: silver;">
+            <th>rice</th>
+            <th>Masoor</th>
+            <th>harbara</th>
+            <th>turdal</th>
+            <th>Mugdal</th>
+            <th>spices</th>
+            <th>fuel</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="text" id="name"></td>
+            <td><input type="text" id="english"></td>
+            <td><input type="text" id="physics"></td>
+            <td><input type="text" id="chem"></td>
+            <td><input type="text" id="maths"></td>
+            <td><input type="text" id="mug"></td>
+            <td><input type="text" id="sp"></td>
+            <td><input type="text" id="fu"></td>
+        </tr>
+    </div>
+        
+        <tr>
+            <th colspan="8" height="30">
+                <input type="submit" value="print" onclick="window.print()"></th>
+            </tr>
+   </table>
+   <br>
+   <!-- <table border="1" cellspacing="5" bgcolor="white"
+      height="100" width="500" cellpadding="5" id="TableScore">
+      <caption><b>Student Data</b></caption>
+      <tr>
+         <th width="180">Name</th>
+         <th>Total</th>
+         <th>Average</th>
+         <th>Pass Or Fail</th>
+      </tr>
+   </table> -->
+</center>
+<script type="text/javascript">
+   function Sub(){
+      var n, k, r, e, v, sum, avg;
+      n=(document.getElementById('name').value);
+      eng=parseFloat(document.getElementById('english').value);
+      phy=parseFloat(document.getElementById('physics').value);
+      chem=parseFloat(document.getElementById('chem').value);
+      maths=parseFloat(document.getElementById('maths').value);
+      // Calculating the Total Marks
+      sum=eng+phy+chem+maths;
+      avg=sum/4;
+      // Displaying the Student Data
+      var newTable = document.getElementById('TableScore');
+      var row = newTable.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(0);
+      var cell3 = row.insertCell(0);
+      var cell4 = row.insertCell(0);
+      cell4.innerHTML= n;
+      cell3.innerHTML=sum;
+      cell2.innerHTML = avg;
+      if(avg>=33){
+         cell1.innerHTML="<font color=green>Pass</font>";
+      } else {
+         cell1.innerHTML="<font color=red>Fail</font>";
+      }
+   }
+</script>
+</body>
+</html>
